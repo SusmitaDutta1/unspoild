@@ -31,7 +31,7 @@
 
       <div>
           <input type="text" placeholder="Search..." class="search-box">
-          <button type="button" class="add-btn">+Add</button>
+          <button type="button" id="myButton" class="add-btn">+Add</button>
         </div>
     
     <hr>
@@ -39,7 +39,37 @@
       <button class="button button2"><a href="#">All</a></button>
       <button class="button button3"><a href="#">Food</a></button>
       <button class="button button4"><a href="#">Med</a></button>
-      
+
+      <!-- popup window -->
+
+    <div id="myPopup" class="popup">
+      <div class="popup-content">
+          <h1>Add An Item</h1>
+
+          <hr>
+
+          <p>Item</p>
+          <input type="text" placeholder="Name..." class="Name-box">
+
+          <p>Expiry Date</p>
+          <input type="date" placeholder="date" class="Expire-box">
+
+          <label for="tag">Chosse a tag</label>
+         
+          <!-- tag select list -->
+          
+          <select name="tag" id="tag" classs="tag-drop" required>
+            <option value="Food">Food</option>
+            <option value="Med">Med</option>
+            <option value="Cosmetic">Cosmetic</option>
+          </select>
+
+         
+          <button id="closePopup" class="popbox Close ">Close</button>
+          <button id="AddPopup" class="popbox Add">Add</button>
+          
+      </div>
+    </div>
     
 
     <ul> 
@@ -49,5 +79,20 @@
       <li class="list3"><a href="#">Status</a></li>
 		 
 	</ul> 
+ 
+  <script>
+    myButton.addEventListener("click", function () {
+        myPopup.classList.add("show");
+    });
+    closePopup.addEventListener("click", function () {
+        myPopup.classList.remove("show");
+    });
+    window.addEventListener("click", function (event) {
+        if (event.target == myPopup) {
+            myPopup.classList.remove("show");
+        }
+    });
+  </script>
+
 </body>
 </html>
