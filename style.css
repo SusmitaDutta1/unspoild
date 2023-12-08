@@ -45,6 +45,7 @@ hr{
     border-top: 2px solid #758d6a;
     border-bottom: 1px solid #4d554a;
     margin-top: 2%;
+    width: 100%;
 }
 /* ############################################## */
 
@@ -84,23 +85,7 @@ ul li a {
     position: relative; 
 
 } 
-/* 
-ul li a::before { 
-    content: ""; 
-    width: 0px; 
-    height: 5px; 
-    background:  rgb(194, 219, 145); 
-    position: absolute; 
-    top: 100%; 
-    left: 0; 
-    transition: .5s; 
-    border-radius: 8px;
-} 
 
-ul li a:hover::before { 
-    width: 50%; 
-    transform: translateX(100%); 
-}  */
 
 .button {
     background-color: #9DC08B;
@@ -130,25 +115,90 @@ ul li a:hover::before {
 }
 
 
-
-/* .add-btn {
-    background-color: rgb(7, 50, 7);
-    border: none;
-    color: rgb(204, 238, 134);
-    padding: 15px;
+.popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.popup-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 30%;
+    font-weight: bolder;
+    border-radius: 30px;
+}
+.popup-content button {
+    display: block;
+    margin: 0 auto;
+}
+.show {
+    display: block;
+}
+h1 {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
-    margin: 4px 2px;
-    border-radius: 12px;
-    position: absolute;
-    right:1%;
-    font-weight: bold;
-    
+    color: #4d554a;
+} 
+
+p{
+    color: #374433;
+    margin-top: 20px;
+}
+.Name-box {
+    border: none;
+    border-bottom: 2px solid olivedrab;
+    width:100%;
 }
 
-.add-btn a{
-    text-decoration: none;
-    color: rgb(194, 219, 145);
-} */
+.Expire-box {
+    border: none;
+    border-bottom: 2px solid olivedrab;
+    width:100%;
+    margin-bottom: 20px;
+}
+
+select{
+    appearance: none;
+    outline: 0;
+    background: #9DC08B;
+    width: 100%;
+    height: 100%;
+    color: black;
+    cursor: pointer;
+    border: 1px solid #40513B;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.popbox{
+    border: none;
+    background-color: #758d6a;
+    margin-top: 20px;
+    padding: 4px 4px 4px 4px; 
+    border-radius: 24px;
+    width: 70px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.Close {
+    position: absolute; 
+    background-color: grey;
+}
+
+
+.Add {
+    position: relative;
+    left: 0;
+}
+
